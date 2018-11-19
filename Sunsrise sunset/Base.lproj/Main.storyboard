@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,122 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sunsrise_sunset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-y4-ODY">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BZq-bN-JH4">
+                                        <rect key="frame" x="82.5" y="0.0" width="170" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPs-xo-7eu">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="getSunriseSunsetButtonPressed:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Pok-au-h5s"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6g-aK-GVZ">
+                                                <rect key="frame" x="0.0" y="50" width="170" height="30"/>
+                                                <state key="normal" title="Get Sunrise/Sunset Time"/>
+                                                <connections>
+                                                    <action selector="getSunriseSunsetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C2G-ho-z7u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qPs-xo-7eu" firstAttribute="width" secondItem="e6g-aK-GVZ" secondAttribute="width" id="Tim-D3-v7H"/>
+                                            <constraint firstItem="qPs-xo-7eu" firstAttribute="top" secondItem="BZq-bN-JH4" secondAttribute="top" constant="100" id="k8v-EI-Mnm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="S84-S0-OUt">
+                                        <rect key="frame" x="0.0" y="410" width="335" height="197"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-6q-Qdx">
+                                                <rect key="frame" x="82.5" y="0.0" width="170" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xox-NW-saP">
+                                                <rect key="frame" x="0.0" y="103" width="335" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sunrise:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3q-Fy-Y5o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="No Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-zu-BdC">
+                                                        <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="m5p-zu-BdC" secondAttribute="trailing" id="wgF-ce-IFt"/>
+                                                    <constraint firstItem="L3q-Fy-Y5o" firstAttribute="leading" secondItem="Xox-NW-saP" secondAttribute="leading" id="yKf-Bi-XeU"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="r9C-jb-Uer">
+                                                <rect key="frame" x="0.0" y="176.5" width="335" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sunset:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKq-aB-jja">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="No Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buk-un-Ued">
+                                                        <rect key="frame" x="272.5" y="0.0" width="62.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Buk-un-Ued" firstAttribute="trailing" secondItem="m5p-zu-BdC" secondAttribute="trailing" id="PdL-15-TDf"/>
+                                            <constraint firstItem="fKq-aB-jja" firstAttribute="leading" secondItem="L3q-Fy-Y5o" secondAttribute="leading" id="XTS-SY-bPi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xox-NW-saP" secondAttribute="trailing" id="liL-QU-QDo"/>
+                                            <constraint firstItem="Xox-NW-saP" firstAttribute="leading" secondItem="S84-S0-OUt" secondAttribute="leading" id="omN-9P-cey"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="S84-S0-OUt" firstAttribute="leading" secondItem="SfX-y4-ODY" secondAttribute="leading" id="NeO-7Q-TNx"/>
+                                    <constraint firstAttribute="trailing" secondItem="S84-S0-OUt" secondAttribute="trailing" id="rcR-Fw-OK1"/>
+                                    <constraint firstItem="BZq-bN-JH4" firstAttribute="top" secondItem="SfX-y4-ODY" secondAttribute="top" id="yPQ-PG-DAI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfX-y4-ODY" secondAttribute="trailing" constant="20" id="6Tj-Mb-IP3"/>
+                            <constraint firstItem="SfX-y4-ODY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9L7-kc-bMg"/>
+                            <constraint firstItem="SfX-y4-ODY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Z3n-Cy-yFg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SfX-y4-ODY" secondAttribute="bottom" constant="20" id="coJ-m3-JhD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="changeCityTextField" destination="qPs-xo-7eu" id="OpU-dN-ORq"/>
+                        <outlet property="cityName" destination="QP8-6q-Qdx" id="Zuu-oD-iIL"/>
+                        <outlet property="getDataButton" destination="e6g-aK-GVZ" id="cZW-wM-cIG"/>
+                        <outlet property="sunriseTimeLabel" destination="m5p-zu-BdC" id="eAK-cb-Sjg"/>
+                        <outlet property="sunsetTimeLabel" destination="Buk-un-Ued" id="VwX-Kf-O0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-10.4" y="68.815592203898049"/>
         </scene>
     </scenes>
 </document>
