@@ -15,10 +15,13 @@ Swift 4.2
 Features
 
 iPhone only
+
 Portrait device orientation
+
 Storyboards & Autolayout
 
 APIs
 
 Sunsrise sunset
+
 Google Places
